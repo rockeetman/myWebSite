@@ -5,18 +5,79 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>aDjenali own website</title>
+   <title>Temperature Converter</title>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+   <h1 class="title">JavaScript Temperature Converter</h1>
 
-   <h1>This is Aktan Djenali own website</h1>
+   <div class="wrapper">
+      <div class="content">
 
 
-   <p>Hey there I am Aktan Djenali and I do code I use JS and I like to code the programs</p>
+         <!-- Fahenreit to Celsius -->
+         <div class="fahenreit">
 
+            <p class="from"> From Fahenreit :
+            <div>
+               <input id="inputFahenreit" type="number" placeholder="Fahenreit" oninput="fahenreit(this.value)"
+                  onchange="fahenreit(this.value)">
+            </div>
+            </p>
 
-   <p>Loh Pidr</p>
+            <p class="to"> To Celsius:
+               <span id="celsius"></span>
+               <span>°C</span>
+            </p>
+
+         </div>
+         <!-- Finished Fahenreit to Celsius -->
+
+         <!-- Celsius to Fahenreit -->
+         <div class="celsius">
+
+            <p class="from"> From Celcius :
+            <div>
+               <input id="inputCelcius" type="number" placeholder="Celsius" oninput="celsius(this.value)"
+                  onchange="celsius(this.value)">
+            </div>
+            </p>
+
+            <p class="to"> To Fahenreit:
+               <span id="fahenreit"></span>
+               <span>°F</span>
+            </p>
+
+         </div>
+         <!-- Finished Celsius to Fahenreit -->
+
+         <!-- Kelvin to Celcius -->
+         <div class="kelvin">
+
+            <p class="from"> From Kelvin :
+            <div>
+               <input id="inputKelvin" type="number" placeholder="Kelvin" oninput="kelvin(this.value)"
+                  onchange="kelvin(this.value)">
+            </div>
+            </p>
+
+            <p class="to"> To Celcius:
+               <span id="kelvin"></span>
+               <span>°C</span>
+            </p>
+
+         </div>
+         <!-- Finished Kelvin to Celcius -->
+
+      </div>
+   </div>
+
+   <script src="main.js"></script>
+
 </body>
 
 </html>
